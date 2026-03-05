@@ -32,7 +32,7 @@ for t in totals:
         failed += 1
 
 topper = totals.index(highest)
-
+#r
 print("\nResults")
 print("Highest total:", highest)
 print("Lowest total:", lowest)
