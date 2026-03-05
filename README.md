@@ -2,3 +2,41 @@
 my first repo.
 
 Author-sameer
+students = int(input("How many students are there?\n>"))
+subjects = int(input("How many subjects are there?\n>"))
+
+totals = []
+
+for i in range(students):
+    print(f"student {i+1}")
+    total = 0 
+
+    for j in range(subjects):
+        marks = int(input(f"enter your marks of subject {j+1}: "))
+        total += marks
+
+
+    totals.append(total)
+
+highest = max(totals)
+lowest = min(totals)
+average = sum(totals)/len(totals)
+
+passed = 0
+failed = 0
+
+for t in totals: 
+    if t >= subjects * 40:
+        passed += 1
+    else :
+        failed += 1
+
+topper = totals.index(highest)
+
+print("\nResults")
+print("Highest total:", highest)
+print("Lowest total:", lowest)
+print("Average total:", average)
+print("Passed students:", passed)
+print("Failed students:", failed)
+print("Topper: Student", topper)
